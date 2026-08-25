@@ -1,9 +1,12 @@
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
 const TO_EMAIL = process.env.CONTACT_TO_EMAIL ?? "kenshin@pillarwebagency.com";
 
 export async function POST(request: Request) {
+  if (!process.env.RESEND_API_KEY) {
+    return Response.json({ error: "Email service is not configured." }, { status: 500 });
+  }
+
   let body: { name?: string; email?: string; message?: string };
 
   try {
@@ -20,6 +23,7 @@ export async function POST(request: Request) {
     return Response.json({ error: "Name and email are required." }, { status: 400 });
   }
 
+  const resend = new Resend(process.env.RESEND_API_KEY);
   const { error } = await resend.emails.send({
     from: "PILLAR Website <onboarding@resend.dev>",
     to: TO_EMAIL,
