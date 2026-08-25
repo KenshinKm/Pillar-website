@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Surfaces — soft charcoal, not near-black */
+  --color-bg: #1a1a1a;
+  --color-surface: #222222;
+  --color-surface-2: #292929;
+
+  /* Text */
+  --color-ink: #f5f5f2;
+  --color-muted: #a8a8a8;
+  --color-faint: #7d7d7d;
+
+  /* Structure */
+  --color-line: #3a3a3a;
+  --color-line-strong: #4d4d4d;
+
+  /* Accent — a muted, desaturated brass. Used sparingly, never as a loud pop. */
+  --color-accent: #b9975f;
+  --color-accent-soft: #8a744f;
+
+  /* Type */
+  --font-sans: var(--font-archivo), "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --font-mono: var(--font-jbmono), "JetBrains Mono", ui-monospace, monospace;
+
+  /* Motion easing */
+  --ease-premium: cubic-bezier(0.16, 1, 0.3, 1);
+
+  --breakpoint-xs: 30rem;
+}
+
+@media (min-width: 1600px) {
+  @theme inline {
+    --breakpoint-3xl: 100rem;
+  }
+}
+
+html {
+  background: var(--color-bg);
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: var(--color-ink);
+  color: var(--color-bg);
+}
+
+/* Thin architectural scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-line-strong);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-muted);
+}
+
+/* Film-grain texture overlay — cheap, static, adds premium depth */
+.grain {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  opacity: 0.035;
+  mix-blend-mode: overlay;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='120' height='120'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+@keyframes blink-caret {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.animate-caret {
+  animation: blink-caret 1s step-end infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 32s linear infinite;
+}
