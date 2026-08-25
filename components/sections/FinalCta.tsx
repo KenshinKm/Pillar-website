@@ -75,7 +75,7 @@ export default function FinalCta() {
               <Field label="Name" name="name" type="text" required />
               <Field label="Email" name="email" type="email" required />
               <div className="flex flex-col gap-2">
-                <label htmlFor="message" className="font-mono text-xs uppercase tracking-[0.1em] text-muted">
+                <label htmlFor="message" className="font-mono text-sm uppercase tracking-[0.1em] text-muted md:text-xs">
                   Tell us about your business
                 </label>
                 <textarea
@@ -135,7 +135,7 @@ function Field({
 }) {
   return (
     <div className="flex flex-col gap-2">
-      <label htmlFor={name} className="font-mono text-xs uppercase tracking-[0.1em] text-muted">
+      <label htmlFor={name} className="font-mono text-sm uppercase tracking-[0.1em] text-muted md:text-xs">
         {label}
       </label>
       <input

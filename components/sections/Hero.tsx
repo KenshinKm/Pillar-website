@@ -7,10 +7,10 @@ import HeroBackdrop from "@/components/sections/HeroBackdrop";
 export default function Hero() {
   return (
     <section className="relative overflow-hidden pt-28 md:pt-32">
-      <div className="relative mx-auto w-full max-w-[1600px] px-6 pb-20 md:px-10 lg:px-16 lg:pb-28">
+      <div className="relative mx-auto w-full max-w-[1600px] px-6 pb-10 md:px-10 lg:px-16 lg:pb-28">
         <Reveal delay={0.1} className="mb-8 flex flex-wrap items-center gap-4">
           <Eyebrow>Web Development &amp; SEO</Eyebrow>
-          <span className="font-mono text-xs uppercase tracking-[0.1em] text-faint">
+          <span className="hidden font-mono text-xs uppercase tracking-[0.1em] text-faint md:inline-block">
             Build. Get Found. Grow.
           </span>
         </Reveal>
