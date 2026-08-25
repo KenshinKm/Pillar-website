@@ -62,9 +62,9 @@ export default function Services() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section id="services" className="border-t border-line bg-bg py-28 md:py-36">
+    <section id="services" className="bg-bg py-28 md:border-t md:border-line md:py-36">
       <div className="mx-auto max-w-[1600px] px-6 md:px-10 lg:px-16">
-        <div className="border-b border-line pb-6">
+        <div className="pb-6 md:border-b md:border-line">
           <Eyebrow>What We Do</Eyebrow>
         </div>
 
@@ -80,7 +80,7 @@ export default function Services() {
               <Reveal key={s.index} delay={i * 0.08}>
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : i)}
-                  className="group relative flex w-full items-baseline gap-6 overflow-hidden border-b border-line py-8 text-left md:gap-10 md:py-12"
+                  className="group relative flex w-full cursor-default items-baseline gap-6 overflow-hidden border-b border-line py-10 text-left md:cursor-pointer md:gap-10 md:py-12"
                 >
                   <span
                     aria-hidden="true"
@@ -98,7 +98,7 @@ export default function Services() {
                     <span className="block font-mono text-xs uppercase tracking-[0.12em] text-accent">
                       {s.kicker}
                     </span>
-                    <span className="mt-2 block text-2xl font-bold uppercase leading-tight tracking-tight text-ink transition-colors duration-300 sm:text-3xl lg:text-4xl">
+                    <span className="mt-2 block text-3xl font-bold uppercase leading-tight tracking-tight text-ink transition-colors duration-300 lg:text-4xl">
                       {s.title}
                     </span>
                   </span>
@@ -119,7 +119,7 @@ export default function Services() {
                       animate={{ height: "auto", opacity: 1 }}
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-                      className="overflow-hidden border-b border-line"
+                      className="hidden overflow-hidden border-b border-line md:block"
                     >
                       <div className="grid gap-8 py-8 pl-0 md:grid-cols-[1fr_2fr] md:gap-10 md:py-10 md:pl-[4.5rem]">
                         <p className="max-w-sm text-muted">{s.description}</p>

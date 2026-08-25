@@ -7,8 +7,6 @@ import HeroBackdrop from "@/components/sections/HeroBackdrop";
 export default function Hero() {
   return (
     <section className="relative overflow-hidden pt-28 md:pt-32">
-      <HeroBackdrop />
-
       <div className="relative mx-auto w-full max-w-[1600px] px-6 pb-20 md:px-10 lg:px-16 lg:pb-28">
         <Reveal delay={0.1} className="mb-8 flex flex-wrap items-center gap-4">
           <Eyebrow>Web Development &amp; SEO</Eyebrow>
@@ -25,7 +23,7 @@ export default function Hero() {
           </span>
         </h1>
 
-        <div className="mt-10 flex flex-col gap-8 border-t border-line pt-8 md:mt-14 md:flex-row md:items-end md:justify-between md:pt-10">
+        <div className="mt-16 flex flex-col gap-8 md:mt-14 md:flex-row md:items-end md:justify-between md:border-t md:border-line md:pt-10">
           <Reveal delay={0.5} className="max-w-md">
             <p className="text-lg text-muted md:text-xl">
               We build premium websites and get them ranking on Google, so
@@ -38,14 +36,14 @@ export default function Hero() {
             <div className="flex flex-wrap items-center gap-4">
               <a
                 href="#contact"
-                className="group inline-flex items-center gap-2 bg-accent px-7 py-3.5 text-sm font-medium uppercase tracking-[0.08em] text-bg transition-colors duration-300 hover:bg-accent-soft"
+                className="group inline-flex items-center gap-2 bg-accent px-7 py-4 text-base font-medium uppercase tracking-[0.08em] text-bg transition-colors duration-300 hover:bg-accent-soft md:py-3.5 md:text-sm"
               >
                 Start a Project
                 <span className="transition-transform duration-300 group-hover:translate-x-1">→</span>
               </a>
               <Link
                 href="/process"
-                className="inline-flex items-center gap-2 border border-line px-7 py-3.5 text-sm font-medium uppercase tracking-[0.08em] text-ink transition-colors duration-300 hover:border-ink"
+                className="inline-flex items-center gap-2 border border-line px-7 py-4 text-base font-medium uppercase tracking-[0.08em] text-ink transition-colors duration-300 hover:border-ink md:py-3.5 md:text-sm"
               >
                 See Our Process
               </Link>
@@ -53,6 +51,8 @@ export default function Hero() {
           </Reveal>
         </div>
       </div>
+
+      <HeroBackdrop />
     </section>
   );
 }

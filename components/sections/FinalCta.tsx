@@ -39,7 +39,7 @@ export default function FinalCta() {
   }
 
   return (
-    <section id="contact" className="relative overflow-hidden border-t border-line bg-bg py-28 md:py-40">
+    <section id="contact" className="relative overflow-hidden bg-bg py-28 md:border-t md:border-line md:py-40">
       <motion.div
         aria-hidden="true"
         className="pointer-events-none absolute -left-24 top-1/2 h-[32rem] w-[32rem] -translate-y-1/2"
@@ -71,7 +71,7 @@ export default function FinalCta() {
           </div>
 
           <Reveal delay={0.2}>
-            <form onSubmit={handleSubmit} className="flex flex-col gap-8 border-t border-line pt-10 lg:pt-2">
+            <form onSubmit={handleSubmit} className="flex flex-col gap-8 pt-10 md:border-t md:border-line lg:pt-2">
               <Field label="Name" name="name" type="text" required />
               <Field label="Email" name="email" type="email" required />
               <div className="flex flex-col gap-2">
@@ -90,7 +90,7 @@ export default function FinalCta() {
               <button
                 type="submit"
                 disabled={status === "loading"}
-                className="group mt-2 inline-flex items-center justify-center gap-2 bg-accent px-8 py-4 text-sm font-medium uppercase tracking-[0.08em] text-bg transition-colors duration-300 hover:bg-accent-soft disabled:opacity-60"
+                className="group mt-2 inline-flex items-center justify-center gap-2 bg-accent px-8 py-5 text-base font-medium uppercase tracking-[0.08em] text-bg transition-colors duration-300 hover:bg-accent-soft disabled:opacity-60 md:py-4 md:text-sm"
               >
                 {status === "loading"
                   ? "Sending…"

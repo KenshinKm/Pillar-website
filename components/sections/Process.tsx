@@ -14,17 +14,17 @@ const STEPS = [
 
 export default function Process() {
   return (
-    <section id="process" className="border-t border-line bg-surface py-28 md:py-36">
+    <section id="process" className="bg-surface py-28 md:border-t md:border-line md:py-36">
       <div className="mx-auto max-w-[1600px] px-6 md:px-10 lg:px-16">
-        <div className="border-b border-line pb-6">
+        <div className="pb-6 md:border-b md:border-line">
           <Eyebrow>How We Work</Eyebrow>
         </div>
 
-        <h2 className="mt-10 max-w-3xl text-3xl font-extrabold uppercase leading-[1.1] tracking-tight text-ink sm:text-4xl">
+        <h2 className="mt-10 max-w-3xl text-4xl font-extrabold uppercase leading-[1.1] tracking-tight text-ink">
           <SplitText text="Process" />
         </h2>
 
-        <div className="mt-16 grid gap-x-6 gap-y-12 sm:grid-cols-2 lg:grid-cols-6">
+        <div className="mt-16 grid gap-x-6 gap-y-16 sm:grid-cols-2 sm:gap-y-12 lg:grid-cols-6">
           {STEPS.map((step, i) => (
             <Reveal key={step.n} delay={i * 0.08} y={16}>
               <div className="relative">
@@ -39,7 +39,7 @@ export default function Process() {
                 <p className="mt-3 hidden text-lg font-bold uppercase tracking-tight text-ink lg:block">
                   {step.title}
                 </p>
-                <p className="mt-2 text-sm text-muted">{step.desc}</p>
+                <p className="mt-2 hidden text-sm text-muted md:block">{step.desc}</p>
               </div>
             </Reveal>
           ))}

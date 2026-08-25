@@ -20,7 +20,7 @@ const STATS = [
 
 export default function Stats() {
   return (
-    <section className="border-t border-line bg-bg py-28 md:py-36">
+    <section className="bg-bg py-28 md:border-t md:border-line md:py-36">
       <div className="mx-auto max-w-[1600px] px-6 md:px-10 lg:px-16">
         <Eyebrow>Why Position Matters</Eyebrow>
 
@@ -55,8 +55,8 @@ export default function Stats() {
           ))}
         </div>
 
-        <div className="mt-20 flex flex-col items-start justify-between gap-8 border-t border-line pt-12 md:mt-28 md:flex-row md:items-end">
-          <h2 className="max-w-2xl text-3xl font-extrabold uppercase leading-[1.1] tracking-tight text-ink sm:text-4xl lg:text-5xl">
+        <div className="mt-20 flex flex-col items-start justify-between gap-8 pt-12 md:mt-28 md:flex-row md:items-end md:border-t md:border-line">
+          <h2 className="max-w-2xl text-4xl font-extrabold uppercase leading-[1.1] tracking-tight text-ink lg:text-5xl">
             <SplitText text="Where you appear matters." />
           </h2>
           <Reveal delay={0.15} className="max-w-xs">

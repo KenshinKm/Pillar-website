@@ -268,9 +268,9 @@ export default function SearchJourney() {
   }, [stage, inView, paused]);
 
   return (
-    <section id="journey" ref={ref} className="border-t border-line bg-bg py-28 md:py-36">
+    <section id="journey" ref={ref} className="bg-bg py-28 md:border-t md:border-line md:py-36">
       <div className="mx-auto max-w-[1600px] px-6 md:px-10 lg:px-16">
-        <div className="border-b border-line pb-6">
+        <div className="pb-6 md:border-b md:border-line">
           <Eyebrow>The Path to a Customer</Eyebrow>
         </div>
 
