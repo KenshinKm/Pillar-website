@@ -68,7 +68,7 @@ export default function Services() {
           <Eyebrow>What We Do</Eyebrow>
         </div>
 
-        <p className="mt-8 max-w-2xl text-lg text-muted md:text-xl">
+        <p className="mt-8 max-w-2xl text-base text-muted md:text-xl">
           Two things, done properly: a website worth visiting, and the
           search visibility that gets people there.
         </p>

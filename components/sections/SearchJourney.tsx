@@ -274,7 +274,7 @@ export default function SearchJourney() {
           <Eyebrow>The Path to a Customer</Eyebrow>
         </div>
 
-        <p className="mt-8 max-w-2xl text-lg text-muted md:text-xl">
+        <p className="mt-8 max-w-2xl text-base text-muted md:text-xl">
           From your website to Google Search and Maps, we build the site
           and the visibility that turns searches into customers.
         </p>

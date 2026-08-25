@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export default function HeroBackdrop() {
   return (
     <div
-      className="relative mx-auto mt-10 w-full max-w-[15rem] md:pointer-events-none md:absolute md:inset-y-0 md:right-0 md:mx-0 md:mt-0 md:flex md:w-[55%] md:max-w-none md:items-center lg:w-[42%] md:[mask-image:linear-gradient(to_left,black_45%,transparent_96%)] md:[-webkit-mask-image:linear-gradient(to_left,black_45%,transparent_96%)]"
+      className="pointer-events-none absolute left-1/2 top-12 flex h-60 w-[85%] max-w-[17rem] -translate-x-1/2 items-center justify-center opacity-[0.16] md:inset-y-0 md:left-auto md:right-0 md:w-[55%] md:max-w-none md:translate-x-0 md:opacity-100 lg:w-[42%] md:[mask-image:linear-gradient(to_left,black_45%,transparent_96%)] md:[-webkit-mask-image:linear-gradient(to_left,black_45%,transparent_96%)]"
     >
       <div className="relative aspect-[4/5] w-full max-w-md overflow-hidden border border-line-strong bg-surface shadow-2xl">
         {/* Browser chrome */}
