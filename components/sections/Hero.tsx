@@ -25,7 +25,7 @@ export default function Hero() {
           </span>
         </h1>
 
-        <div className="mt-16 flex flex-col gap-8 md:mt-14 md:flex-row md:items-end md:justify-between md:border-t md:border-line md:pt-10">
+        <div className="mt-16 flex flex-col gap-8 md:mt-14 md:flex-row md:items-end md:justify-between">
           <Reveal delay={0.5} className="max-w-md">
             <p className="text-base text-muted md:text-xl">
               We build premium websites and get them ranking on Google, so
