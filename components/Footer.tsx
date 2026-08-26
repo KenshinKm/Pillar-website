@@ -43,9 +43,20 @@ export default function Footer() {
               href="https://www.instagram.com/pillarwebagency"
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 block text-sm text-muted transition-colors hover:text-ink"
+              aria-label="PILLAR on Instagram"
+              className="mt-4 inline-flex text-muted transition-colors hover:text-ink"
             >
-              Instagram
+              <svg
+                viewBox="0 0 24 24"
+                className="h-5 w-5"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.6"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4.2" />
+                <circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none" />
+              </svg>
             </a>
           </div>
 
