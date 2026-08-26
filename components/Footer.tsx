@@ -44,7 +44,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="PILLAR on Instagram"
-              className="mt-4 inline-flex text-muted transition-colors hover:text-ink"
+              className="mt-4 flex w-fit text-muted transition-colors hover:text-ink"
             >
               <svg
                 viewBox="0 0 24 24"
