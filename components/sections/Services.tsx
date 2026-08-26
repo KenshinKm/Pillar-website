@@ -69,8 +69,9 @@ export default function Services() {
         </div>
 
         <p className="mt-8 max-w-2xl text-base text-muted md:text-xl">
-          Two things, done properly: a website worth visiting, and the
-          search visibility that gets people there.
+          Three things, done properly: a website worth visiting, the
+          search visibility that gets people there, and the ongoing work
+          that keeps it that way.
         </p>
 
         <div className="mt-4">

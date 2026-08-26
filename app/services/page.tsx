@@ -63,8 +63,9 @@ export default function ServicesPage() {
       <Nav />
       <main>
         <PageHeader eyebrow="Services" title="What We Build">
-          Two disciplines, done properly: a website worth visiting, and the
-          search visibility that gets people there.
+          Three things, done properly: a website worth visiting, the
+          search visibility that gets people there, and the ongoing work
+          that keeps it that way.
         </PageHeader>
 
         <section className="bg-bg">
