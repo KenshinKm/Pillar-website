@@ -27,7 +27,7 @@ export default function WorkPage() {
           strategy behind it, and how it performs in search.
         </PageHeader>
 
-        <section className="border-b border-line bg-bg py-20 md:py-28">
+        <section className="bg-bg py-20 md:border-b md:border-line md:py-28">
           <div className="mx-auto max-w-[1600px] px-6 md:px-10 lg:px-16">
             {hasProjects ? (
               <div className="grid gap-16 lg:grid-cols-2 lg:gap-x-10">

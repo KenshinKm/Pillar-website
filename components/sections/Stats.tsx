@@ -22,7 +22,9 @@ export default function Stats() {
   return (
     <section className="bg-bg py-28 md:border-t md:border-line md:py-36">
       <div className="mx-auto max-w-[1600px] px-6 md:px-10 lg:px-16">
-        <Eyebrow>Why Position Matters</Eyebrow>
+        <div className="pb-6 md:border-b md:border-line">
+          <Eyebrow>Why Position Matters</Eyebrow>
+        </div>
 
         <div className="mt-10 grid gap-px overflow-hidden border border-line bg-line md:grid-cols-2">
           {STATS.map((stat) => (
@@ -55,7 +57,7 @@ export default function Stats() {
           ))}
         </div>
 
-        <div className="mt-20 flex flex-col items-start justify-between gap-8 pt-12 md:mt-28 md:flex-row md:items-end md:border-t md:border-line">
+        <div className="mt-14 flex flex-col items-start justify-between gap-8 md:mt-28 md:flex-row md:items-end md:border-t md:border-line md:pt-12">
           <h2 className="max-w-2xl text-4xl font-extrabold uppercase leading-[1.1] tracking-tight text-ink lg:text-5xl">
             <SplitText text="Where you appear matters." />
           </h2>

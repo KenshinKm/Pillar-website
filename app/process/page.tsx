@@ -74,9 +74,11 @@ export default function ProcessPage() {
           you along the way.
         </PageHeader>
 
-        <section className="border-b border-line bg-bg py-20 md:py-28">
+        <section className="bg-bg py-20 md:border-b md:border-line md:py-28">
           <div className="mx-auto max-w-[1000px] px-6 md:px-10 lg:px-16">
-            <Eyebrow>Roadmap From Purchase</Eyebrow>
+            <div className="pb-6 md:border-b md:border-line">
+              <Eyebrow>Roadmap From Purchase</Eyebrow>
+            </div>
 
             <div className="mt-10 space-y-0">
               {PHASES.map((phase, i) => (

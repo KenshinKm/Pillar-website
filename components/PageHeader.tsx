@@ -13,9 +13,11 @@ export default function PageHeader({
   children?: ReactNode;
 }) {
   return (
-    <section className="relative overflow-hidden border-b border-line pb-16 pt-36 md:pb-20 md:pt-44">
+    <section className="relative overflow-hidden pb-16 pt-36 md:border-b md:border-line md:pb-20 md:pt-44">
       <div className="mx-auto max-w-[1600px] px-6 md:px-10 lg:px-16">
-        <Eyebrow>{eyebrow}</Eyebrow>
+        <div className="pb-6 md:border-b md:border-line">
+          <Eyebrow>{eyebrow}</Eyebrow>
+        </div>
         <h1 className="mt-8 max-w-3xl text-4xl font-black uppercase leading-[1.05] tracking-tight text-ink sm:text-5xl lg:text-6xl">
           <SplitText text={title} />
         </h1>

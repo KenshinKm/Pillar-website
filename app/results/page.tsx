@@ -69,9 +69,11 @@ export default function ResultsPage() {
           whether your website is actually working.
         </PageHeader>
 
-        <section className="border-b border-line bg-bg py-20 md:py-28">
+        <section className="bg-bg py-20 md:border-b md:border-line md:py-28">
           <div className="mx-auto max-w-[1600px] px-6 md:px-10 lg:px-16">
-            <Eyebrow>What We Track</Eyebrow>
+            <div className="pb-6 md:border-b md:border-line">
+              <Eyebrow>What We Track</Eyebrow>
+            </div>
             <div className="mt-10 grid gap-px overflow-hidden border border-line bg-line sm:grid-cols-2 lg:grid-cols-3">
               {METRICS.map((metric, i) => (
                 <Reveal key={metric.name} delay={i * 0.05} className="bg-bg p-8">
@@ -85,9 +87,11 @@ export default function ResultsPage() {
           </div>
         </section>
 
-        <section className="border-b border-line bg-surface py-20 md:py-28">
+        <section className="bg-surface py-20 md:border-b md:border-line md:py-28">
           <div className="mx-auto max-w-[1600px] px-6 md:px-10 lg:px-16">
-            <Eyebrow>How We Report</Eyebrow>
+            <div className="pb-6 md:border-b md:border-line">
+              <Eyebrow>How We Report</Eyebrow>
+            </div>
             <div className="mt-10 grid gap-10 md:grid-cols-3 md:gap-8">
               {REPORTING.map((item, i) => (
                 <Reveal key={item.title} delay={i * 0.08}>
