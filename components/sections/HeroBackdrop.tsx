@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export default function HeroBackdrop() {
   return (
     <div
-      className="pointer-events-none absolute left-1/2 top-20 flex h-96 w-[85%] max-w-[17rem] -translate-x-1/2 items-center justify-center opacity-[0.2] [mask-image:linear-gradient(to_bottom,transparent_0%,black_20%,black_80%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,transparent_0%,black_20%,black_80%,transparent_100%)] md:inset-y-0 md:left-auto md:right-0 md:w-[55%] md:max-w-none md:translate-x-0 md:opacity-100 lg:w-[42%] md:[mask-image:linear-gradient(to_left,black_45%,transparent_96%)] md:[-webkit-mask-image:linear-gradient(to_left,black_45%,transparent_96%)]"
+      className="pointer-events-none absolute left-1/2 top-20 flex h-[42rem] w-[85%] max-w-[17rem] -translate-x-1/2 items-center justify-center opacity-[0.2] [mask-image:linear-gradient(to_bottom,transparent_0%,black_15%,black_82%,transparent_100%)] [-webkit-mask-image:linear-gradient(to_bottom,transparent_0%,black_15%,black_82%,transparent_100%)] md:inset-y-0 md:left-auto md:right-0 md:w-[55%] md:max-w-none md:translate-x-0 md:opacity-100 lg:w-[42%] md:[mask-image:linear-gradient(to_left,black_45%,transparent_96%)] md:[-webkit-mask-image:linear-gradient(to_left,black_45%,transparent_96%)]"
     >
       <div className="relative aspect-[4/5] w-full max-w-md overflow-hidden border border-line-strong bg-surface shadow-2xl">
         {/* Browser chrome */}
