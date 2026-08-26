@@ -83,7 +83,7 @@ export default function FinalCta() {
                   name="message"
                   rows={3}
                   className="resize-none border-b border-line bg-transparent py-3 text-lg text-ink outline-none transition-colors placeholder:text-faint focus:border-accent"
-                  placeholder="What do you do, and where do you want to be found?"
+                  placeholder="e.g. We're a local HVAC company looking to rank higher on Google."
                 />
               </div>
 

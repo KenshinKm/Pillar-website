@@ -39,6 +39,14 @@ export default function Footer() {
             >
               kenshin@pillarwebagency.com
             </a>
+            <a
+              href="https://www.instagram.com/pillarwebagency"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 block text-sm text-muted transition-colors hover:text-ink"
+            >
+              Instagram
+            </a>
           </div>
 
           {COLUMNS.map((col) => (
