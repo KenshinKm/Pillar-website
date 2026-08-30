@@ -19,7 +19,7 @@ const PHASES = [
     duration: "Days 1–3",
     summary:
       "We start by learning your business inside and out: who your customers are, what they search for, and where you currently stand in Google.",
-    fromYou: "A call to walk through your business, access to your current site if you have one, and any past marketing data.",
+    fromYou: "A call to walk through your business, access to your current site if you have one, and any existing brand materials.",
   },
   {
     n: "02",
@@ -43,7 +43,7 @@ const PHASES = [
     duration: "Week 2–3",
     summary:
       "We deploy the site and connect it to Search Console, Analytics, and your Google Business Profile, so everything is tracked from day one.",
-    fromYou: "Access to your domain and any existing Google accounts.",
+    fromYou: "Access to your domain and any existing Google Business Profile, Analytics, or Search Console accounts. If you do not have these or are not sure, we will walk you through it.",
   },
   {
     n: "05",
@@ -51,7 +51,7 @@ const PHASES = [
     duration: "Ongoing",
     summary:
       "Once live, we refine rankings, pages, and performance against real data. Not guesses about what might work.",
-    fromYou: "Nothing. This runs in the background.",
+    fromYou: "Not much. We handle the ongoing work and reach out if we need anything from you.",
   },
   {
     n: "06",
@@ -59,7 +59,7 @@ const PHASES = [
     duration: "Ongoing",
     summary:
       "Ongoing management that compounds your visibility over time: new pages, technical maintenance, and continuous search optimization.",
-    fromYou: "A monthly check-in, if you want one.",
+    fromYou: "Just keep us updated on any changes to your business. We will take care of the rest.",
   },
 ];
 
