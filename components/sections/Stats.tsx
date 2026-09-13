@@ -1,5 +1,4 @@
 import Reveal from "@/components/motion/Reveal";
-import SplitText from "@/components/motion/SplitText";
 import Eyebrow from "@/components/type/Eyebrow";
 import CountUp from "@/components/motion/CountUp";
 
@@ -55,19 +54,6 @@ export default function Stats() {
               </a>
             </Reveal>
           ))}
-        </div>
-
-        <div className="mt-14 flex flex-col items-start justify-between gap-8 md:mt-28 md:flex-row md:items-end md:border-t md:border-line md:pt-12">
-          <h2 className="max-w-2xl text-4xl font-extrabold uppercase leading-[1.1] tracking-tight text-ink lg:text-5xl">
-            <SplitText text="Where you appear matters." />
-          </h2>
-          <Reveal delay={0.15} className="max-w-xs">
-            <p className="text-muted">
-              Your website can&rsquo;t convert customers who never find it.
-              That&rsquo;s why every PILLAR site is built to rank, not just
-              to look good.
-            </p>
-          </Reveal>
         </div>
       </div>
     </section>
