@@ -52,6 +52,18 @@ export default function WorkPage() {
                               className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
                             />
                           )}
+                          {project.testimonial && (
+                            <div className="absolute inset-0 flex items-center overflow-y-auto bg-bg/0 p-8 opacity-0 transition-all duration-500 group-hover:bg-bg/92 group-hover:opacity-100 md:p-10">
+                              <div>
+                                <p className="text-base font-medium leading-snug text-ink md:text-lg">
+                                  &ldquo;{project.testimonial.quote}&rdquo;
+                                </p>
+                                <p className="mt-4 font-mono text-xs uppercase tracking-[0.1em] text-muted">
+                                  — {project.testimonial.author}
+                                </p>
+                              </div>
+                            </div>
+                          )}
                         </div>
                         <div className="mt-5 flex items-baseline justify-between border-t border-line pt-4">
                           <div>
