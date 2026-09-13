@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import PageHeader from "@/components/PageHeader";
@@ -31,20 +32,41 @@ export default function WorkPage() {
           <div className="mx-auto max-w-[1600px] px-6 md:px-10 lg:px-16">
             {hasProjects ? (
               <div className="grid gap-16 lg:grid-cols-2 lg:gap-x-10">
-                {PROJECTS.map((project, i) => (
-                  <Reveal key={project.title} delay={i * 0.1}>
-                    <a href={project.href ?? "#"} className="group block">
-                      <div className="aspect-[16/10] w-full overflow-hidden border border-line bg-surface" />
-                      <div className="mt-5 flex items-baseline justify-between border-t border-line pt-4">
-                        <div>
-                          <p className="text-lg font-semibold text-ink">{project.title}</p>
-                          <p className="mt-1 text-sm text-muted">{project.category}</p>
+                {PROJECTS.map((project, i) => {
+                  const isExternal = project.href?.startsWith("http");
+                  return (
+                    <Reveal key={project.title} delay={i * 0.1}>
+                      <a
+                        href={project.href ?? "#"}
+                        target={isExternal ? "_blank" : undefined}
+                        rel={isExternal ? "noopener noreferrer" : undefined}
+                        className="group block"
+                      >
+                        <div className="relative aspect-[16/10] w-full overflow-hidden border border-line bg-surface">
+                          {project.image && (
+                            <Image
+                              src={project.image}
+                              alt={project.title}
+                              fill
+                              sizes="(min-width: 1024px) 50vw, 100vw"
+                              className="object-cover object-top transition-transform duration-500 group-hover:scale-[1.03]"
+                            />
+                          )}
                         </div>
-                        <span className="font-mono text-xs text-faint">{project.year}</span>
-                      </div>
-                    </a>
-                  </Reveal>
-                ))}
+                        <div className="mt-5 flex items-baseline justify-between border-t border-line pt-4">
+                          <div>
+                            <p className="text-lg font-semibold text-ink">{project.title}</p>
+                            <p className="mt-1 text-sm text-muted">{project.category}</p>
+                          </div>
+                          <span className="font-mono text-xs text-faint">{project.year}</span>
+                        </div>
+                        {project.summary && (
+                          <p className="mt-3 max-w-md text-sm text-muted">{project.summary}</p>
+                        )}
+                      </a>
+                    </Reveal>
+                  );
+                })}
               </div>
             ) : (
               <div className="grid gap-8 md:grid-cols-2">
