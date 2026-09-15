@@ -1,7 +1,10 @@
 import type { Metadata, Viewport } from "next";
+import Script from "next/script";
 import { archivo, jbMono } from "@/lib/fonts";
 import MotionProvider from "@/components/motion/MotionProvider";
 import "./globals.css";
+
+const GOOGLE_ADS_ID = "AW-18451717511";
 
 const SITE_URL = "https://pillarwebagency.com";
 const SITE_NAME = "PILLAR";
@@ -115,6 +118,18 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GOOGLE_ADS_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-ads-gtag" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GOOGLE_ADS_ID}');
+          `}
+        </Script>
         <div className="grain" />
         <MotionProvider>{children}</MotionProvider>
       </body>
