@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import SplitText from "@/components/motion/SplitText";
 import Reveal from "@/components/motion/Reveal";
@@ -104,7 +105,12 @@ export default function FinalCta() {
 
               {status === "success" && (
                 <p className="text-sm text-accent">
-                  Thanks — we&rsquo;ll be in touch shortly.
+                  Thanks for reaching out. We&rsquo;re excited to learn more
+                  about your business. To see what happens next,{" "}
+                  <Link href="/process" className="underline hover:text-ink">
+                    check out our process
+                  </Link>
+                  .
                 </p>
               )}
               {status === "error" && (
