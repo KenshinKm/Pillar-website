@@ -4,6 +4,7 @@ import { useState, type FormEvent } from "react";
 import { motion } from "framer-motion";
 import SplitText from "@/components/motion/SplitText";
 import Reveal from "@/components/motion/Reveal";
+import { reportContactConversion } from "@/lib/gtag";
 
 const CONTACT_EMAIL = "kenshin@pillarwebagency.com";
 
@@ -32,6 +33,7 @@ export default function FinalCta() {
       if (!res.ok) throw new Error("Request failed");
 
       setStatus("success");
+      reportContactConversion();
       form.reset();
     } catch {
       setStatus("error");

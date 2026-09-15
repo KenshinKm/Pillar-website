@@ -2,9 +2,8 @@ import type { Metadata, Viewport } from "next";
 import Script from "next/script";
 import { archivo, jbMono } from "@/lib/fonts";
 import MotionProvider from "@/components/motion/MotionProvider";
+import { GOOGLE_ADS_ID } from "@/lib/gtag";
 import "./globals.css";
-
-const GOOGLE_ADS_ID = "AW-18451717511";
 
 const SITE_URL = "https://pillarwebagency.com";
 const SITE_NAME = "PILLAR";
