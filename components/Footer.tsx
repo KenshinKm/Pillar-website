@@ -81,8 +81,13 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="mt-16 flex flex-col items-start justify-between gap-4 border-t border-line pt-8 font-mono text-xs uppercase tracking-[0.08em] text-faint sm:flex-row sm:items-center">
-          <span>&copy; {new Date().getFullYear()} PILLAR. All rights reserved.</span>
+        <div className="mt-16 flex flex-col items-start gap-4 border-t border-line pt-8 font-mono text-xs uppercase tracking-[0.08em] text-faint sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
+            <span>&copy; {new Date().getFullYear()} PILLAR. All rights reserved.</span>
+            <Link href="/privacy" className="transition-colors hover:text-ink">
+              Privacy Policy
+            </Link>
+          </div>
           <span>Build. Get Found. Grow.</span>
         </div>
       </div>
